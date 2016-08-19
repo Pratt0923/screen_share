@@ -10,8 +10,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       #TODO need to add columns to user db for token and uid
       )
       @user.save
-      binding.pry
-      redirect_to start_index_path
+      sign_in @user
+      redirect_to chat_rooms_path
     else
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
       sign_in @user
