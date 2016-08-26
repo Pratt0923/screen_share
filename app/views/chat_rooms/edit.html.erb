@@ -1,0 +1,11 @@
+
+<p>Title:</p>
+<p><%= @chat_room.title %></p>
+
+<p>description:</p>
+<p><%= @chat_room.description %></p>
+
+<p>Github:</p>
+<p><%= @chat_room.github_url %></p>
+
+<p><%= link_to "Enter #{@chat_room.title}", chat_room_path(@chat_room) %></p>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
-  resources :chat_rooms, only: [:new, :create, :show, :index]
+  resources :chat_rooms
 
   mount ActionCable.server => '/cable'
 

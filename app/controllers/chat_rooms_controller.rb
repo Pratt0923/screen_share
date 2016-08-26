@@ -22,6 +22,10 @@ class ChatRoomsController < ApplicationController
     @message = Message.new
   end
 
+  def edit
+    @chat_room = ChatRoom.find(params[:id])
+  end
+
   private
 
   def chat_room_params
