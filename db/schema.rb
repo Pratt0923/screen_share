@@ -15,9 +15,11 @@ ActiveRecord::Schema.define(version: 20160614154147) do
 
   create_table "chat_rooms", force: :cascade do |t|
     t.string   "title"
+    t.string   "description"
+    t.string   "github_url"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_chat_rooms_on_user_id"
   end
 
