@@ -1,7 +1,13 @@
 <h1>Projects</h1>
 
 <p class="lead"><%= link_to 'New Collaboration', new_chat_room_path, class: 'btn btn-primary' %></p>
-
+<% @chat_rooms.each do |chat_room| %>
 <ul>
-  <%= render @chat_rooms %>
+  <%= link_to "#{chat_room.title}", edit_chat_room_path(chat_room) %>
+  <% if chat_room.messages.all.last %>
+    <p>Last updated at <%= chat_room.messages.all.last.created_at.strftime("%F") %></p>
+  <% else %>
+    <p>Be the first to contribute to this!</p>
+    <% end %>
 </ul>
+<% end %>
