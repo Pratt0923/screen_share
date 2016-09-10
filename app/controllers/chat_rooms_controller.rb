@@ -21,11 +21,6 @@ class ChatRoomsController < ApplicationController
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @message = Message.new
-    #if hangouts exists
-      hangouts_exists
-    #else
-      hangouts_does_not_exist
-    #end
   end
 
   def edit
@@ -36,21 +31,5 @@ class ChatRoomsController < ApplicationController
 
   def chat_room_params
     params.require(:chat_room).permit(:title, :description, :github_url)
-  end
-
-  def hangouts_exists
-    if @chat_room.user_id == current_user.id
-      #make the button be a end a hangouts session
-    else
-      #make it a join a hangouts button
-    end
-  end
-
-  def hangouts_does_not_exist
-    if @chat_room.user_id == current_user.id
-      #button to create a hangouts session
-    else
-      #greyed out button to join a hangouts session
-    end
   end
 end
