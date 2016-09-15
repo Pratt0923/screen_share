@@ -28,3 +28,23 @@ h1 {
 footer {
   margin-top: 50px;
 }
+
+.colorDarkBrown {
+  color: #6e5f5a;
+}
+
+.createAProject {
+  background-color: #f8eddb;
+  margin-top:2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-family: 'Asap', sans-serif;
+  .formCreate {
+    h1 {
+      text-align:center;
+      font-weight: bold;
+    }
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
