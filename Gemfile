@@ -11,7 +11,7 @@ gem 'redis', '~> 3.2'
 gem 'devise'
 gem "omniauth-google-oauth2"
 gem 'figaro'
-
+gem 'httparty'
 group :development do
   gem 'sqlite3'
   gem 'pry-rails'
