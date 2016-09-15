@@ -1,10 +1,13 @@
+<div class="wholePage">
 
-<p>Title:</p>
+<div class="lightercolor">
 <p><%= @chat_room.title %></p>
+</div>
 
-<p>description:</p>
+<div class="lightercolor">
 <p><%= @chat_room.description %></p>
+</div>
 
 <a href="<%= @chat_room.github_url %>">Github</a>
-
 <p><%= link_to "Enter #{@chat_room.title}", chat_room_path(@chat_room) %></p>
+</div>
