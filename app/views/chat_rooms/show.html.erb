@@ -1,11 +1,18 @@
-<h1><%= @chat_room.title %></h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h1><%= @chat_room.title %></h1>
 
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @chat_room.messages %>
-</div>
+  <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    <%= render @chat_room.messages %>
+  </div>
 
-<hr>
-<%= form_for @message, url: '#' do |f| %>
+  <hr>
+  <%= form_for @message, url: '#' do |f| %>
   <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
   <div class="form-group">
     <%= f.label :body %>
@@ -14,9 +21,12 @@
   </div>
 
   <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
-<% end %>
+  <% end %>
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="g-hangout" data-render="createhangout"
-    data-initial_apps="[{ app_id : '110164573185041618905', start_data : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }]">
-</div>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <g:hangout render="createhangout"
+        invites="[{ id : '110164573185041618905', invite_type : 'PROFILE' }]">
+    </g:hangout>
+
+</body>
+</html>
