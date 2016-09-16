@@ -8,10 +8,10 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 gem 'turbolinks', '>= 5.0.0.beta2'
 gem 'redis', '~> 3.2'
-gem 'devise'
 gem "omniauth-google-oauth2"
 gem 'figaro'
 gem 'httparty'
+gem 'devise'
 group :development do
   gem 'sqlite3'
   gem 'pry-rails'
