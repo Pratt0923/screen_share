@@ -8,7 +8,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         password: Devise.friendly_token[0, 20],
         token: request.env['omniauth.auth'].credentials.token,
         uid: request.env['omniauth.auth'].uid
-        # TODO: need to add columns to user db for token and uid
       )
       @user.save
     else

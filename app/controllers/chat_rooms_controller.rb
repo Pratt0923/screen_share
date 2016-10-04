@@ -23,8 +23,6 @@ class ChatRoomsController < ApplicationController
 # Or multiple languages. I want users to be able to search through those languages
 # and find projects with the languages that they want to work in.
 
-# https://developer.join.me/docs/read/meetings/start_meetings
-# this is the api I want to use for doing collab things. It allow a user to screencapture their code and other users to view it.
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @message = Message.new
